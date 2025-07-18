@@ -1,0 +1,30 @@
+.jour {
+    font-style: italic;
+}
+#lun {
+    color:yellow;
+}
+
+#mar {
+    color:orange;
+}
+
+#mer {
+    color:red;
+}
+
+#jeu {
+    color:purple;
+}
+
+#ven{
+    color:blue;
+}
+
+#sam {
+    color:green;
+}
+
+#dim {
+    color:gray;
+}
