@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap');
+
+body{
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    font-family: "Bitcount Single", system-ui;
+}
+
+div{
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+}
+
+h2{
+    color:orangered;
+    background-color: yellow;
+}
+h1, h2{
+    font-size: 1.5em;
+}
+ul {
+    text-align: left;
+}
+img{
+    border: 2px solid orange;
+    border-radius:10px 20px;
+    box-shadow: 3px 3px 3px yellow;
+}
+h1 {
+    text-shadow: 2px 2px 2px yellow;
+}
+
+img:hover{
+    width: 150%;
+}
+
+a:visited{
+    color:orange;
+}
