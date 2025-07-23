@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color : white;
+    
+}
+table {
+    width: 70%;
+    margin: auto;
+}
+caption {
+    font-size: 40px;
+}
+td {
+    border: 20px solid red;
+    height: 100px;
+}
+
+.red{
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.left{
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.top {
+    vertical-align: top;
+}
+.middle {
+    vertical-align: middle;
+}
+.bottom {
+    vertical-align: bottom;
+}
