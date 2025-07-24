@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><a href="cv.html">Retour à mon cv</a></p>
+    <div class="flex-col">
+        <div class="w70">
+            <h1>Formulaire de contact</h1>
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="nom" id="nom" required autofocus>
+                    <br>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" required>
+                    <br>
+                    <p>Sexe : </p>
+                    <input type="radio" name="sexe" id="homme" value="homme">
+                    <label for="homme">Je suis un homme</label>
+                    <br>
+                    <input type="radio" name="sexe" id="femme" value="femme">
+                    <label for="femme">Je suis un femme</label>
+                    <p>Adresse : </p>
+                    <label for="rue">Rue :</label>
+                    <input type="text" name="rue" id="rue" required>
+                    <br>
+                    <label for="numero">Numéro :</label>
+                    <input type="text" name="numero" id="numero" required>
+                    <br>
+                    <label for="cp">Code postal :</label>
+                    <input type="number" name="cp" id="cp" required min="1000" max="9999">
+                    <br>
+                    <label for="ville">Ville :</label>
+                    <input type="text" name="ville" id="ville" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Vos besoins</legend>
+                    <p>Sélectionnez le(s) domaine(s) de compétence :</p>
+                    <input type="checkbox" name="css" id="css">
+                    <label for="css">CSS</label>
+                    <br>
+                    <input type="checkbox" name="html" id="html">
+                    <label for="html">HTML</label>
+                    <br>
+                    <input type="checkbox" name="php" id="php">
+                    <label for="php">PHP</label>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Votre message</legend>
+                    <textarea name="message" id="message" maxlength="300" placeholder="Max 300 caractères"></textarea>
+                </fieldset>
+                <input type="reset" value="Vider le formulaire">
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

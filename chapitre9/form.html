@@ -39,9 +39,9 @@
         <input type="checkbox" name="html" id="html"> <label for="html"> HTML</label><br>
         <input type="checkbox" name="php" id="php"> <label for="php"> PHP</label><br>
         <p>Que préférez-vous ?</p>
-        <input type="radio" name="web" value="css"><label for="css"> CSS</label><br>
-        <input type="radio" name="web" value="html"><label for="html"> HTML</label><br>
-        <input type="radio" name="web" value="php"><label for="php"> PHP</label><br>
+        <input type="radio" name="web" value="css" id="css-radio"><label for="css-radio"> CSS</label><br>
+        <input type="radio" name="web" value="html-radio" id="html"><label for="html-radio"> HTML</label><br>
+        <input type="radio" name="web" value="php" id="php-radio"><label for="php-radio"> PHP</label><br>
 
         <p>Que préférez-vous ?</p>
         <select name="web">
@@ -73,5 +73,19 @@
         <input type="file" name="fichier" id="fichier">
         
     </form>
+    <script>
+        let css = document.querySelector("#css-radio");
+        css.addEventListener("click", function(e){
+            console.log(this.checked);
+            if(this.checked == true){
+                this.checked = false;
+            }
+            else{
+                this.checked = false;
+            }
+        });
+       
+        
+    </script>
 </body>
 </html>
