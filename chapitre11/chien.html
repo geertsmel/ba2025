@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chien </title>
+</head>
+<body>
+    <script>
+        // const snoopy = {
+        //     nbPattes : 4,
+        //     crier(){
+        //         console.log("Waf");
+        //     }
+        // }
+
+        // console.log(snoopy);
+        // snoopy.crier();
+
+        class Chien {
+            constructor(nom, queue){
+                this.nom = nom;
+                this.nbPattes = 4;
+                this.queue = queue;
+            }
+            crier(){
+                console.log("Waf");
+            }
+            medaille(){
+                console.log(this.nom);
+                
+            }
+        }
+        
+        const milou = new Chien("milou");
+        console.log(milou);
+        milou.crier();
+        milou.poil = true;
+        console.log(milou);
+        milou.medaille();
+        
+
+    </script>
+</body>
+</html>

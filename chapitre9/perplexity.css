@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #b6e0fe 0%, #ffc9ec 100%);
+  min-height: 100vh;
+  font-family: 'VT323', monospace;
+}
+
+.contact-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 14px;
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 600px;
+  margin: 80px auto 0 auto;
+  background: #fff;            /* Fond blanc */
+  border-radius: 8px;          /* Coins arrondis */
+  box-shadow: 4px 6px 16px 0 rgba(0,0,0,0.10); /* Ombre portée */
+  text-align: center;
+  padding: 24px 16px 32px 16px;
+  border: 3px solid #f5df0a;
+}
+
+
+h1 {
+  margin: 0;
+  font-family: 'VT323', monospace;
+  font-size: 2.3em;
+  letter-spacing:1px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.job-title {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.profile-img img {
+  width: 180px;
+  border: 3px solid #f5df0a;
+  background: #e6f4fd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.section {
+  margin: 28px 0 0 0;
+  text-align: left;
+}
+
+.section h2 {
+  background: #ffe600;
+  color: #ff2626;
+  border-radius: 4px;
+  font-size: 1.3em;
+  padding: 5px 16px;
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 1.1em;
+}
+
+.section:last-child p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+a {
+  color: #286dfb;
+  text-decoration: underline;
+}
+a:hover {
+  color: #1836b8;
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 30px 8px 0 8px;
+    padding: 18px 4px 20px 4px;
+  }
+
+  .profile-img img {
+    width: 100vw;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5em; }
+  .job-title { font-size: 1em; }
+  .section h2 { font-size: 1.1em; }
+}

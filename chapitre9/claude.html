@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Simpson - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E6E6FA 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #0066cc;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        .cv-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            margin: 50px auto 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: white;
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .title {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 120px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #ADD8E6 100%);
+            border-radius: 15px;
+            border: 3px solid #FFA500;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Clouds */
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50px;
+        }
+
+        .cloud1 {
+            width: 30px;
+            height: 15px;
+            top: 20px;
+            left: 30px;
+        }
+
+        .cloud2 {
+            width: 25px;
+            height: 12px;
+            top: 15px;
+            right: 40px;
+        }
+
+        .cloud3 {
+            width: 35px;
+            height: 18px;
+            top: 25px;
+            right: 20px;
+        }
+
+        /* Lisa character */
+        .lisa-character {
+            position: relative;
+            z-index: 10;
+        }
+
+        .lisa-head {
+            width: 60px;
+            height: 60px;
+            background: #FFD700;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Lisa's spiky hair */
+        .hair-spike {
+            position: absolute;
+            background: #FFD700;
+            border-radius: 50% 50% 50% 0;
+        }
+
+        .spike1 {
+            width: 15px;
+            height: 25px;
+            top: -20px;
+            left: 10px;
+            transform: rotate(-30deg);
+        }
+
+        .spike2 {
+            width: 18px;
+            height: 30px;
+            top: -25px;
+            left: 20px;
+            transform: rotate(-10deg);
+        }
+
+        .spike3 {
+            width: 20px;
+            height: 35px;
+            top: -30px;
+            left: 25px;
+            transform: rotate(10deg);
+        }
+
+        .spike4 {
+            width: 18px;
+            height: 30px;
+            top: -25px;
+            left: 35px;
+            transform: rotate(30deg);
+        }
+
+        .spike5 {
+            width: 15px;
+            height: 25px;
+            top: -20px;
+            left: 40px;
+            transform: rotate(50deg);
+        }
+
+        /* Lisa's eyes */
+        .eye {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            top: 15px;
+        }
+
+        .left-eye {
+            left: 15px;
+        }
+
+        .right-eye {
+            right: 15px;
+        }
+
+        .pupil {
+            width: 4px;
+            height: 4px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+        }
+
+        /* Lisa's dress */
+        .lisa-dress {
+            width: 40px;
+            height: 30px;
+            background: #FF6B6B;
+            border-radius: 10px 10px 0 0;
+            margin: -5px auto 0;
+        }
+
+        .section {
+            background: #FFFF99;
+            margin: 0;
+            padding: 15px 30px;
+            border-top: 3px solid #FFD700;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #FF4500;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .experience-item, .skill-item, .formation-text {
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .period {
+            font-weight: bold;
+        }
+
+        .formation-text {
+            text-align: center;
+        }
+
+        .technobel-link {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .cv-card {
+                margin: 20px 10px;
+            }
+
+            .name {
+                font-size: 2em;
+            }
+
+            .title {
+                font-size: 1em;
+            }
+
+            .section {
+                padding: 15px 20px;
+            }
+
+            .profile-image {
+                width: 160px;
+                height: 100px;
+            }
+
+            .lisa-head {
+                width: 50px;
+                height: 50px;
+            }
+
+            .lisa-dress {
+                width: 35px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px 15px;
+            }
+
+            .name {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 12px 15px;
+            }
+
+            .section-title {
+                font-size: 1.1em;
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 90px;
+            }
+
+            .contact-link {
+                font-size: 12px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="contact-link">Contactez-moi</a>
+    
+    <div class="cv-card">
+        <div class="header">
+            <h1 class="name">Lisa Simpson</h1>
+            <p class="title">Développeuse Web</p>
+            
+            <div class="profile-image">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+                <div class="cloud cloud3"></div>
+                
+                <div class="lisa-character">
+                    <div class="lisa-head">
+                        <div class="hair-spike spike1"></div>
+                        <div class="hair-spike spike2"></div>
+                        <div class="hair-spike spike3"></div>
+                        <div class="hair-spike spike4"></div>
+                        <div class="hair-spike spike5"></div>
+                        
+                        <div class="eye left-eye">
+                            <div class="pupil"></div>
+                        </div>
+                        <div class="eye right-eye">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="lisa-dress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Mon expérience</h2>
+            <div class="experience-item">
+                <span class="period">De 2000 à 2025 :</span> Créer <strong>un</strong> agent pour dominer le monde (^^^)
+            </div>
+            <div class="experience-item">
+                <span class="period">De 1995 à 2000 :</span> Dominer le monde
+            </div>
+            <div class="experience-item">
+                <span class="period">De 1990 à 1995 :</span> Apprendre à dominer le monde
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skill-item">• ChatGPT</div>
+            <div class="skill-item">• Python</div>
+            <div class="skill-item">• Torture</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Ma formation</h2>
+            <div class="formation-text">
+                J'ai suivi la formation "Business Analyst ICT" chez 
+                <a href="#" class="technobel-link">Technobel</a> durant 9 mois.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
