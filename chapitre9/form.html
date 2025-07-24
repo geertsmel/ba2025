@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="login">Login : </label>
+        <input type="text" name="login" id="login" maxlength="3" placeholder="Entrez votre login" autofocus>
+        <br>
+        <label for="psd">Mot de passe <span class="red">*</span>:</label>
+        <input type="password" name="psd" id="psd" required>
+        <br>
+        <label for="zone">Zone de texte</label>
+        <textarea name="zone" id="zone" rows="5" cols="3"></textarea>
+        <br>
+        <label for="email">Entre ton email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="url">Entre ton site web</label>
+        <input type="url" name="url" id="url">
+        <br>
+        <label for="nbenfants">Entre le nombre d'enfants que tu as</label>
+        <input type="number" name="nbenfants" id="nbenfants" min="0" max="125" step="4">
+        <br>
+        <label for="dn">Date de naissance</label>
+        <input type="date" name="dn" id="dn">
+
+        <br>
+        <p>Qu'aimez-vous ?</p>
+        <input type="checkbox" name="css" id="css"> <label for="css"> CSS</label><br>
+        <input type="checkbox" name="html" id="html"> <label for="html"> HTML</label><br>
+        <input type="checkbox" name="php" id="php"> <label for="php"> PHP</label><br>
+        <p>Que préférez-vous ?</p>
+        <input type="radio" name="web" value="css"><label for="css"> CSS</label><br>
+        <input type="radio" name="web" value="html"><label for="html"> HTML</label><br>
+        <input type="radio" name="web" value="php"><label for="php"> PHP</label><br>
+
+        <p>Que préférez-vous ?</p>
+        <select name="web">
+            <optgroup label="Front-end">
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+            </optgroup>
+            <optgroup label="Back-end">
+                <option value="php">PHP</option>
+            </optgroup>
+        </select>
+        <br>
+        <fieldset>
+            <legend>Mes coordonnées</legend>
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"><br>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom">
+            </fieldset>
+        <fieldset>
+        <legend>Mes préférences</legend>
+            <p>Qu'aimez-vous ?</p>
+            <input type="checkbox" name="css" id="css"><label for="css"> CSS</label><br>
+            <input type="checkbox" name="html" id="html"><label for="html"> HTML</label><br>
+            <input type="checkbox" name="php" id="php"><label for="php"> PHP</label><br>
+            </fieldset>
+        <button type="submit">Valider</button>
+        <input type="submit" value="Valider">
+        <input type="reset" value="Vider le form">
+        <br>
+        <input type="file" name="fichier" id="fichier">
+        
+    </form>
+</body>
+</html>
